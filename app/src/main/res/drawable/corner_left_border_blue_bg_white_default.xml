@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 顶部带圆角 白色背景 灰色边框 无下边框 长方体 -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+<item>
+    <shape>
+        <solid android:color="@color/app_white"/>
+        <corners
+            android:bottomLeftRadius="@dimen/button_corner_radius"
+            android:topLeftRadius="@dimen/button_corner_radius"
+            />
+        <stroke
+            android:width="0.5dip"
+            android:color="@color/text_deep_blue"/>
+    </shape>
+</item>
+</layer-list>
+

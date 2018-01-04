@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+    <tab
+        id="@+id/tab_index"
+        icon="@mipmap/ic_home_press"
+        title="首页" />
+    <tab
+        id="@+id/tab_order"
+        icon="@mipmap/ic_order_press"
+        title="订单" />
+    <tab
+        id="@+id/tab_client"
+        icon="@mipmap/ic_client_press"
+        title="客户" />
+    <tab
+        id="@+id/tab_my"
+        icon="@mipmap/ic_my_press"
+        title="我的" />
+</tabs>

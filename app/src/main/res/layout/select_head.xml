@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/btn_left"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/selector_button_text_blue_to_white_left_corner"
+                android:textColor="@drawable/selector_button_text_blue_to_white"
+                android:textSize="14dp"
+                android:text="左边"/>
+
+
+            <Button
+                android:id="@+id/btn_right"
+                android:layout_width="80dp"
+                android:layout_height="30dp"
+                android:background="@drawable/selector_button_text_blue_to_white_right_corner"
+                android:textColor="@drawable/selector_button_text_blue_to_white"
+                android:textSize="14dp"
+                android:text="右边"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/more"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:visibility="visible"
+            />
+    </RelativeLayout>
+</RelativeLayout>
