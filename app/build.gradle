@@ -4,6 +4,8 @@ android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
     buildToolsVersion rootProject.ext.android.buildToolsVersion
     defaultConfig {
+        multiDexEnabled true
+
         applicationId rootProject.ext.android.applicationId
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
@@ -39,8 +41,6 @@ dependencies {
     androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    //compile 'com.android.support:appcompat-v7:26.+'
-    //compile 'com.android.support:design:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
 
     //base
@@ -50,15 +50,11 @@ dependencies {
     compile rootProject.ext.dependencies["cardview-v7"]
 
     //canary
-    debugCompile rootProject.ext.dependencies["blockcanary-android"]
-    releaseCompile rootProject.ext.dependencies["blockcanary-no-op"]
     debugCompile rootProject.ext.dependencies["leakcanary-android"]
     releaseCompile rootProject.ext.dependencies["leakcanary-android-no-op"]
 
     //log
     compile rootProject.ext.dependencies["logger"]
-    compile rootProject.ext.dependencies["statusbarutil"]
-    compile rootProject.ext.dependencies["floatingactionbutton"]
     compile rootProject.ext.dependencies["butterknife"]
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
 
@@ -71,8 +67,8 @@ dependencies {
     compile rootProject.ext.dependencies["retrofit-converter-gson"]
     compile rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
 
-    compile rootProject.ext.dependencies["marquee"]
     compile rootProject.ext.dependencies["SmartRefreshLayout"]
+    compile rootProject.ext.dependencies["rxpermissions2"]
 
 
     testCompile 'junit:junit:4.12'
