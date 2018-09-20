@@ -14,6 +14,7 @@ import com.scwang.smartrefresh.layout.header.ClassicsHeader;
 import com.twan.base.R;
 import com.twan.base.adapter.BaseRecyclerAdapter;
 import com.twan.base.adapter.SmartViewHolder;
+import com.twan.base.api.Api;
 import com.twan.base.app.BaseFragment;
 import com.twan.base.entity.Good;
 
@@ -21,9 +22,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 import butterknife.BindView;
-
-import static android.support.v7.widget.DividerItemDecoration.VERTICAL;
-
 
 /**
  * Created by twan on 2017/10/26.
@@ -57,7 +55,7 @@ public class HomeFargment extends BaseFragment implements AdapterView.OnItemClic
         mRefreshLayout.setRefreshHeader(new ClassicsHeader(mContext));
         mRefreshLayout.setRefreshFooter(new ClassicsFooter(mContext));
         mRecyclerView.setLayoutManager(new LinearLayoutManager(mContext));
-        mRecyclerView.addItemDecoration(new DividerItemDecoration(mContext, VERTICAL));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(mContext, DividerItemDecoration.VERTICAL));
         mRecyclerView.setItemAnimator(new DefaultItemAnimator());
         mRecyclerView.setAdapter(mAdpater = new BaseRecyclerAdapter<Good>(mddddd, R.layout.item_sample) {
             @Override

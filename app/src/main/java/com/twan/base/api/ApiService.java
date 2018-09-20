@@ -1,5 +1,6 @@
 package com.twan.base.api;
 
+import com.twan.base.entity.Bean;
 import com.twan.base.entity.Good;
 
 import java.util.List;
@@ -19,6 +20,6 @@ public interface ApiService {
     @GET("room/findAllRooms")
     Call<Result<List<Good>>> getRooms();
 
-    @POST("room/test")
-    Observable<Result<String>> getBlogs(@Query("page") int page);
+    @POST("xiandu/categories")
+    Observable<Result<Bean>> getBlogs();
 }

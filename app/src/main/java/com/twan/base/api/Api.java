@@ -24,7 +24,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 
 public class Api {
-    public static final String BASE_URL = "http://192.168.1.54:8181/zy/";
+    public static final String BASE_URL = "https://gank.io/api/";
 
     private static Retrofit mRetrofit;
 
