@@ -2,6 +2,7 @@ package com.twan.base.api;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.twan.base.BuildConfig;
 import com.twan.base.app.Constants;
 import com.twan.base.util.SystemUtil;
 
@@ -15,6 +16,7 @@ import okhttp3.Interceptor;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import okhttp3.logging.HttpLoggingInterceptor;
 import retrofit2.Retrofit;
 import retrofit2.adapter.rxjava2.RxJava2CallAdapterFactory;
 import retrofit2.converter.gson.GsonConverterFactory;
@@ -33,6 +35,12 @@ public class Api {
             Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd hh:mm:ss").create();
 
             OkHttpClient.Builder builder = new OkHttpClient.Builder();
+            //打印日志,发布设为NONE
+
+
+            HttpLoggingInterceptor logging = new HttpLoggingInterceptor();
+            logging.setLevel(BuildConfig.DEBUG ? HttpLoggingInterceptor.Level.BODY : HttpLoggingInterceptor.Level.NONE);//
+
             File cacheFile = new File(Constants.PATH_CACHE);
             Cache cache = new Cache(cacheFile, 1024 * 1024 * 50);
             Interceptor cacheInterceptor = new Interceptor() {
@@ -74,8 +82,9 @@ public class Api {
             //        设置统一的请求头部参数
             //        builder.addInterceptor(apikey);
             //设置缓存
-            builder.addNetworkInterceptor(cacheInterceptor);
-            builder.addInterceptor(cacheInterceptor);
+            //builder.addNetworkInterceptor(cacheInterceptor);
+            //builder.addInterceptor(cacheInterceptor);
+            builder.addInterceptor(logging);
             builder.cache(cache);
             //设置超时
             builder.connectTimeout(10000, TimeUnit.MILLISECONDS);

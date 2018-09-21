@@ -5,6 +5,7 @@ import com.twan.base.entity.Good;
 
 import java.util.List;
 
+import io.reactivex.Flowable;
 import io.reactivex.Observable;
 import retrofit2.Call;
 import retrofit2.http.GET;
@@ -20,6 +21,6 @@ public interface ApiService {
     @GET("room/findAllRooms")
     Call<Result<List<Good>>> getRooms();
 
-    @POST("xiandu/categories")
-    Observable<Result<Bean>> getBlogs();
+    @GET("xiandu/categories")
+    Flowable<Bean> getBlogs();
 }
