@@ -1,13 +1,14 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    compileSdkVersion 28
     defaultConfig {
         multiDexEnabled true
 
         applicationId rootProject.ext.android.applicationId
         minSdkVersion rootProject.ext.android.minSdkVersion
         targetSdkVersion rootProject.ext.android.targetSdkVersion
+        buildToolsVersion rootProject.ext.android.buildToolsVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
 
@@ -33,51 +34,41 @@ android {
     dexOptions {
         javaMaxHeapSize "4g" //specify the heap size for the dex process
     }
-    buildToolsVersion '27.0.3'
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
-    compile 'com.android.support.constraint:constraint-layout:1.0.2'
-
+    implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     //base
-    compile rootProject.ext.dependencies["appcompat-v7"]
-    compile rootProject.ext.dependencies["design"]
-    compile rootProject.ext.dependencies["recyclerview-v7"]
-    compile rootProject.ext.dependencies["cardview-v7"]
-
+    implementation rootProject.ext.dependencies["appcompat-v7"]
+    implementation rootProject.ext.dependencies["design"]
+    implementation rootProject.ext.dependencies["recyclerview-v7"]
+    implementation rootProject.ext.dependencies["cardview-v7"]
     //canary
-    debugCompile rootProject.ext.dependencies["leakcanary-android"]
-    releaseCompile rootProject.ext.dependencies["leakcanary-android-no-op"]
-
+    debugImplementation rootProject.ext.dependencies["leakcanary-android"]
+    releaseImplementation rootProject.ext.dependencies["leakcanary-android-no-op"]
     //log
-    compile rootProject.ext.dependencies["logger"]
-    compile rootProject.ext.dependencies["butterknife"]
+    implementation rootProject.ext.dependencies["logger"]
+    implementation rootProject.ext.dependencies["butterknife"]
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.5.1'
-
-    compile rootProject.ext.dependencies["rxandroid"]
-    compile rootProject.ext.dependencies["rxjava"]
-
+    implementation rootProject.ext.dependencies["rxandroid"]
+    implementation rootProject.ext.dependencies["rxjava"]
     //network
-    compile rootProject.ext.dependencies["retrofit"]
-    compile rootProject.ext.dependencies["gson"]
-    compile rootProject.ext.dependencies["retrofit-converter-gson"]
-    compile rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
-    compile rootProject.ext.dependencies["logging-interceptor"]
-
-    compile rootProject.ext.dependencies["SmartRefreshLayout"]
-    compile rootProject.ext.dependencies["rxpermissions2"]
-
-    compile 'com.uber.autodispose:autodispose-android-archcomponents:1.0.0-RC2'
-
-    testCompile 'junit:junit:4.12'
-    compile project(path: ':bottom-bar')
-    compile project(path: ':swipebacklayout')
-    compile project(path: ':mylibary')
-
+    implementation rootProject.ext.dependencies["retrofit"]
+    implementation rootProject.ext.dependencies["gson"]
+    implementation rootProject.ext.dependencies["retrofit-converter-gson"]
+    implementation rootProject.ext.dependencies["retrofit-adapter-rxjava2"]
+    implementation rootProject.ext.dependencies["logging-interceptor"]
+    implementation rootProject.ext.dependencies["SmartRefreshLayout"]
+    implementation rootProject.ext.dependencies["rxpermissions2"]
+    implementation 'com.uber.autodispose:autodispose-android-archcomponents:1.0.0-RC2'
+    testImplementation 'junit:junit:4.12'
+    implementation project(path: ':bottom-bar')
+    implementation project(path: ':swipebacklayout')
+    implementation project(path: ':mylibary')
 }
 repositories {
     mavenCentral()

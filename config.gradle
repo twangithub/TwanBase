@@ -1,17 +1,17 @@
 ext {
 
     android = [
-            compileSdkVersion : 26,
-            buildToolsVersion : '26.0.2',
+            compileSdkVersion : 28,
+            buildToolsVersion : '28.0.2',
             applicationId     : "com.twan.base",
             minSdkVersion     : 19,
-            targetSdkVersion  : 25,
+            targetSdkVersion  : 28,
             versionCode       : 1,
             versionName       : "1.0.0"
     ]
 
     def dependVersion = [
-            support     : "26.+",
+            support     : "28.+",
             leakcanary  : "1.6.1",
     ]
 

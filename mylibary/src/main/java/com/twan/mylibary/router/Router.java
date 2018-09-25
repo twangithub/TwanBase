@@ -1,4 +1,4 @@
-package com.tsfa.mylibary.router;
+package com.twan.mylibary.router;
 
 /**
  * Created by twan on 2017/11/2.
@@ -15,10 +15,6 @@ import android.support.v4.app.ActivityOptionsCompat;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-
-/**
- * Created by wanglei on 2016/11/29.
- */
 public class Router {
 
     private Intent intent;
