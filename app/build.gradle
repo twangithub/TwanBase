@@ -1,9 +1,9 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 28
+
     defaultConfig {
-        multiDexEnabled true
+        //multiDexEnabled true
 
         applicationId rootProject.ext.android.applicationId
         minSdkVersion rootProject.ext.android.minSdkVersion
@@ -11,6 +11,7 @@ android {
         buildToolsVersion rootProject.ext.android.buildToolsVersion
         versionCode rootProject.ext.android.versionCode
         versionName rootProject.ext.android.versionName
+        compileSdkVersion rootProject.ext.android.compileSdkVersion
 
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
     }
@@ -64,7 +65,7 @@ dependencies {
     implementation rootProject.ext.dependencies["logging-interceptor"]
     implementation rootProject.ext.dependencies["SmartRefreshLayout"]
     implementation rootProject.ext.dependencies["rxpermissions2"]
-    implementation 'com.uber.autodispose:autodispose-android-archcomponents:1.0.0-RC2'
+    implementation rootProject.ext.dependencies["autodispose"]
     testImplementation 'junit:junit:4.12'
     implementation project(path: ':bottom-bar')
     implementation project(path: ':swipebacklayout')

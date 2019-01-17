@@ -5,26 +5,6 @@
     <color name="bb_darkBackgroundColor">#212121</color>
     <color name="bb_inActiveBottomBarItemColor">#747474</color>
     <color name="bb_tabletRightBorderDark">#505050</color>
-    <declare-styleable name="BottomBar">
-        <attr format="reference" name="bb_tabXmlResource"/>
-        <attr format="boolean" name="bb_tabletMode"/>
-        <attr name="bb_behavior">
-            <flag name="shifting" value="1"/>
-            <flag name="shy" value="2"/>
-            <flag name="underNavbar" value="4"/>
-            <flag name="iconsOnly" value="8"/>
-        </attr>
-        <attr format="boolean" name="bb_longPressHintsEnabled"/>
-        <attr format="float" name="bb_inActiveTabAlpha"/>
-        <attr format="float" name="bb_activeTabAlpha"/>
-        <attr format="color" name="bb_inActiveTabColor"/>
-        <attr format="color" name="bb_activeTabColor"/>
-        <attr format="color" name="bb_badgeBackgroundColor"/>
-        <attr format="boolean" name="bb_badgesHideWhenActive"/>
-        <attr format="reference" name="bb_titleTextAppearance"/>
-        <attr format="string" name="bb_titleTypeFace"/>
-        <attr format="boolean" name="bb_showShadow"/>
-    </declare-styleable>
     <dimen name="bb_default_elevation">8dp</dimen>
     <dimen name="bb_fake_shadow_height">4dp</dimen>
     <dimen name="bb_height">56dp</dimen>
@@ -57,4 +37,24 @@
         <item name="android:maxLines">1</item>
         <item name="android:gravity">center_horizontal</item>
     </style>
+    <declare-styleable name="BottomBar">
+        <attr format="reference" name="bb_tabXmlResource"/>
+        <attr format="boolean" name="bb_tabletMode"/>
+        <attr name="bb_behavior">
+            <flag name="shifting" value="1"/>
+            <flag name="shy" value="2"/>
+            <flag name="underNavbar" value="4"/>
+            <flag name="iconsOnly" value="8"/>
+        </attr>
+        <attr format="boolean" name="bb_longPressHintsEnabled"/>
+        <attr format="float" name="bb_inActiveTabAlpha"/>
+        <attr format="float" name="bb_activeTabAlpha"/>
+        <attr format="color" name="bb_inActiveTabColor"/>
+        <attr format="color" name="bb_activeTabColor"/>
+        <attr format="color" name="bb_badgeBackgroundColor"/>
+        <attr format="boolean" name="bb_badgesHideWhenActive"/>
+        <attr format="reference" name="bb_titleTextAppearance"/>
+        <attr format="string" name="bb_titleTypeFace"/>
+        <attr format="boolean" name="bb_showShadow"/>
+    </declare-styleable>
 </resources>

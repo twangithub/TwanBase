@@ -2,7 +2,7 @@ ext {
 
     android = [
             compileSdkVersion : 28,
-            buildToolsVersion : '28.0.2',
+            buildToolsVersion : '28.0.3',
             applicationId     : "com.twan.base",
             minSdkVersion     : 19,
             targetSdkVersion  : 28,
@@ -41,5 +41,6 @@ ext {
 
             "SmartRefreshLayout"        : 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-5',
             "rxpermissions2"            : 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar',
+            "autodispose"               : 'com.uber.autodispose:autodispose-android-archcomponents:1.0.0-RC2'
     ]
 }
