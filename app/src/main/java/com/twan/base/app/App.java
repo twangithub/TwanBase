@@ -7,6 +7,7 @@ import android.util.DisplayMetrics;
 import android.view.Display;
 import android.view.WindowManager;
 
+import com.simple.spiderman.SpiderMan;
 import com.twan.base.BuildConfig;
 
 
@@ -33,6 +34,7 @@ public class App extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        SpiderMan.init(this);
         instance = this;
 
         //初始化屏幕宽高

@@ -66,6 +66,8 @@ dependencies {
     implementation rootProject.ext.dependencies["SmartRefreshLayout"]
     implementation rootProject.ext.dependencies["rxpermissions2"]
     implementation rootProject.ext.dependencies["autodispose"]
+    //此方式仅debug有效
+    debugImplementation rootProject.ext.dependencies["spiderman"]
     testImplementation 'junit:junit:4.12'
     implementation project(path: ':bottom-bar')
     implementation project(path: ':swipebacklayout')

@@ -41,6 +41,7 @@ ext {
 
             "SmartRefreshLayout"        : 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.4-5',
             "rxpermissions2"            : 'com.tbruyelle.rxpermissions2:rxpermissions:0.9.5@aar',
-            "autodispose"               : 'com.uber.autodispose:autodispose-android-archcomponents:1.0.0-RC2'
+            "autodispose"               : 'com.uber.autodispose:autodispose-android-archcomponents:1.0.0-RC2',
+            "spiderman"                 : 'com.simple:spiderman:1.1.0'
     ]
 }
