@@ -15,18 +15,29 @@
     <color name="color_light_blue">#00DDB6</color>
     <color name="partTranslucent">#39000000</color>
     <color name="dim_diaog_bg">#80bebebe</color>
+    <color name="app_white">#ffffff</color>
 
 
     <color name="text_blue">#0086e5</color>
     <color name="text_white">#ffffff</color>
+    <color name="text_white_b">#bfffffff</color>
     <color name="text_deep_blue">#0086e5</color>
     <color name="text_black">#333333</color>
-    <color name="text_gray">#999999</color>
+    <color name="text_gray">#c2c4ca</color>
     <color name="text_deep_gray">#777777</color>
     <color name="text_hint_gray">#cccccc</color>
     <color name="text_red">#FF0000</color>
+    <color name="text_orange">#f05522</color>
+    <color name="text_pink">#f13564</color>
+    <color name="text_yellow">#ffb726</color>
     <color name="text_green">#73e673</color>
+    <color name="text_green_deep">#26c184</color>
     <color name="text_light_bule">#4080D2</color>
+    <color name="text_head">#4a4a4a</color>
+    <color name="tag">#666666</color>
+    <color name="text_assit">#999999</color>
+    <color name="divider">#D6D6D6</color>
+    <color name="black_p50">#7f000000</color>
 
 
 </resources>
