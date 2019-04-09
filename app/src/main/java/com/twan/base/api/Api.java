@@ -79,8 +79,8 @@ public class Api {
             //                return chain.proceed(request);
             //            }
             //        }
-            //        设置统一的请求头部参数
-            //        builder.addInterceptor(apikey);
+            //        //设置统一的请求头部参数,此处必须是addNetworkInterceptor，而不是addInterceptor
+            //        builder.addNetworkInterceptor(apikey);
             //设置缓存
             //builder.addNetworkInterceptor(cacheInterceptor);
             //builder.addInterceptor(cacheInterceptor);
