@@ -1,5 +1,6 @@
 package com.twan.base.util;
 
+import android.app.Activity;
 import android.content.ClipData;
 import android.content.ClipboardManager;
 import android.content.Context;
@@ -9,10 +10,12 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.net.Uri;
 import android.provider.MediaStore;
+import android.provider.Settings;
 import android.text.TextUtils;
 import android.view.View;
 
 
+import com.twan.base.BuildConfig;
 import com.twan.base.app.App;
 import com.twan.base.app.Constants;
 
@@ -122,5 +125,16 @@ public class SystemUtil {
             }
         }
         return null;
+    }
+
+    /**
+     * 跳转到app设置页面
+     * @param context
+     */
+    public static void skipAppSettings(Activity context) {
+        Intent intent = new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS);
+        Uri uri = Uri.parse("package:" + BuildConfig.APPLICATION_ID);
+        intent.setData(uri);
+        context.startActivity(intent);
     }
 }
