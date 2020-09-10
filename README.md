@@ -1,5 +1,6 @@
 # TwanBase
-Android基础项目,已集成常用组件,便于快速开发.
+Android基础项目,已集成常用组件,便于快速开发.<br>
+现已全面升级到KotlinBase: https://github.com/twangithub/KotlinBase
 
 ## 1. 已集成:
 - 1.canary
